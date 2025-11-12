@@ -1,0 +1,78 @@
+/* 自定义导航栏Logo样式 */
+.navbar-logo {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+}
+
+/* 导航栏品牌链接样式优化 */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* 标签页内容优化 */
+.page-content h1, .page-content h2, .page-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.page-content ul {
+  line-height: 1.8;
+}
+
+.page-content strong {
+  color: #34495e;
+}
+
+/* 分类和标签页面样式 */
+.page-content .category-chain-item,
+.page-content .tag-cloud a {
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.page-content .category-chain-item:hover,
+.page-content .tag-cloud a:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* 关于页面头像样式 */
+.about-avatar img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-avatar img:hover {
+  transform: scale(1.05);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 28px;
+    width: 28px;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
