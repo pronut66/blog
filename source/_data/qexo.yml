@@ -1,0 +1,21 @@
+# Qexo配置文件
+# 用于优化管理后台性能
+
+# 版本检查配置
+version_check:
+  enabled: false  # 禁用版本检查以提高速度
+  check_interval: 24  # 检查间隔(小时)
+
+# GitHub API配置
+github:
+  enabled: false  # 禁用GitHub API调用以提高速度
+  timeout: 5  # API超时时间(秒)
+
+# 缓存配置
+cache:
+  enabled: true
+  expire_time: 300  # 缓存过期时间(秒)
+
+# 通知配置
+notifications:
+  enabled: false  # 禁用实时通知以提高性能
