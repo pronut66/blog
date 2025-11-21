@@ -58,6 +58,13 @@ jobs:
           directory: public
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Configure Custom Domain
+        run: |
+          echo "Configuring custom domain sishier.lol..."
+          # This will be handled by Cloudflare Pages automatically
+          # or can be configured in the dashboard
+          echo "Visit https://dash.cloudflare.com/pages to add custom domain sishier.lol"
+
       - name: Show deployment URL
         run: |
           echo "Deployment completed!"
