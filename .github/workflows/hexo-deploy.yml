@@ -1,20 +1,20 @@
-name: Deploy to GitHub Pages
+name: Hexo Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+        submodules: false
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -36,7 +36,7 @@ jobs:
         npm install
         npm install -g hexo-cli
 
-    - name: Build Hexo site
+    - name: Build site
       run: |
         hexo clean
         hexo generate
@@ -47,8 +47,9 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
         publish_branch: gh-pages
+        force_orphan: true
 
-    - name: Show deployment info
+    - name: Display deployment info
       run: |
-        echo "GitHub Pages deployment completed!"
-        echo "Site will be available at: https://pronut66.github.io/blog/"
+        echo "🎉 Hexo site deployed to GitHub Pages!"
+        echo "📍 Site URL: https://$(echo $GITHUB_REPOSITORY | cut -d'/' -f1).github.io/$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)/"
