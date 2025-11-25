@@ -1,0 +1,39 @@
+<%# Live2D 看板娘 %>
+<% if (theme.live2d && theme.live2d.enable) { %>
+  <%# 加载 Live2D Widget 库 %>
+  <script src="https://fastly.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
+
+  <%# 加载自定义配置 %>
+  <%- js('/js/live2d-config.js') %>
+
+  <%# 样式优化 %>
+  <style>
+    /* Live2D 容器样式优化 */
+    #live2dcanvas {
+      border: 0 !important;
+      z-index: 999;
+      background: transparent !important; /* 背景完全透明 */
+      pointer-events: auto !important;
+    }
+
+    /* 移动端适配 */
+    @media (max-width: 768px) {
+      <% if (!theme.live2d.mobile || !theme.live2d.mobile.show) { %>
+      #live2dcanvas {
+        display: none !important;
+      }
+      <% } %>
+    }
+
+    /* 对话框样式 */
+    .live2d-widget-dialog-container {
+      font-size: 14px;
+      color: #333;  /* 深色文字 */
+      background: transparent !important;  /* 完全透明背景 */
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);  /* 添加白色阴影让文字更清晰 */
+    }
+  </style>
+<% } %>

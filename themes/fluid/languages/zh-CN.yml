@@ -5,9 +5,9 @@ home:
   title: '首页'
 
 archive:
-  menu: '归档'
-  title: '归档'
-  subtitle: '归档'
+  menu: '时间线'
+  title: '时间线'
+  subtitle: '时间线'
   post_total: '共计 %d 篇文章'
 
 category:

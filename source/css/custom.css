@@ -1,3 +1,42 @@
+/* 自定义鼠标光标样式 */
+html, body {
+  cursor: url('/media/images/custom-cursor-32.png') 0 0, auto;
+}
+
+* {
+  cursor: url('/media/images/custom-cursor-32.png') 0 0, auto;
+}
+
+/* 链接悬停时的光标 */
+a, button, .clickable, [role="button"] {
+  cursor: url('/media/images/custom-cursor-32.png') 0 0, pointer;
+}
+
+/* 文本选择时的光标 */
+input, textarea, [contenteditable="true"] {
+  cursor: url('/media/images/custom-cursor-32.png') 0 0, text;
+}
+
+/* 评论区域光标样式 */
+.giscus, .giscus-frame,
+#giscus-container, #giscus-container *,
+.utterances, .utterances-frame,
+.comment, .comment *,
+.comments, .comments *,
+.post-comments, .post-comments *,
+iframe {
+  cursor: url('/media/images/custom-cursor-32.png') 0 0, auto !important;
+}
+
+/* 评论区链接和按钮 */
+.giscus a, .giscus button,
+.utterances a, .utterances button,
+.comment a, .comment button,
+.comments a, .comments button,
+.post-comments a, .post-comments button {
+  cursor: url('/media/images/custom-cursor-32.png') 0 0, pointer !important;
+}
+
 /* 自定义导航栏Logo样式 */
 .navbar-logo {
   height: 32px;

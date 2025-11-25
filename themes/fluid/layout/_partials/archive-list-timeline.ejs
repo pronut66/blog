@@ -1,0 +1,40 @@
+<!-- 简洁时间线归档页面 Simple Timeline Archive Page -->
+
+<!-- 引入时间线样式 -->
+<%- css('/css/timeline.css') %>
+
+<div class="timeline-header">
+  <p class="timeline-total"><%= __(params.key + '.post_total', params.postTotal) %></p>
+</div>
+
+<div class="timeline-container">
+  <% var dateCursor %>
+
+  <% page.posts.each(function (post) { %>
+    <!-- 年份分隔 -->
+    <% if(date(post.date, "YYYY") !== dateCursor) { %>
+      <% dateCursor = date(post.date, "YYYY") %>
+      <div class="timeline-year">
+        <span class="timeline-year-label"><%= dateCursor %></span>
+      </div>
+    <% } %>
+
+    <!-- 时间线项目 -->
+    <div class="timeline-item">
+      <!-- 时间节点 -->
+      <div class="timeline-dot"></div>
+
+      <!-- 文章内容 -->
+      <div class="timeline-content">
+        <a href="<%= url_for(post.path) %>" class="timeline-link">
+          <div class="timeline-date">
+            <%= date(post.date, "MM-DD") %>
+          </div>
+          <h3 class="timeline-title"><%= post.title %></h3>
+        </a>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+<%- partial('_partials/paginator') %>
