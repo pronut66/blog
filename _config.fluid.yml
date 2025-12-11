@@ -211,7 +211,7 @@ post:
       awl: 2
       wpm: 60
     views:
-      enable: false
+      enable: true
       source: busuanzi
   updated:
     enable: false

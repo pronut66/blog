@@ -1,8 +1,9 @@
 ---
-title: 关于我
-date: 2025-11-11 13:52:16
+title: "关于我"
+date: "2025-11-11 13:52:16"
+updated: "2025-12-01T06:51:29.359Z"
+layout: "page"
 ---
-
 ## 欢迎来到四十二阁 👋
 
 你好！我是sishier，这里是我的技术博客。
@@ -19,19 +20,12 @@ date: 2025-11-11 13:52:16
 
 ### 联系我
 
-- 📧 Email: [sishier@example.com]
-- 🐙 GitHub: [@sishier-blog]
-- 🐦 Twitter: [@sishier_dev]
+- 📧 Email: [sishierge42@gmail.com]
+- 🐙 GitHub: [@pronut66]
 - 🌐 博客: [sishier.lol](https://sishier.lol)
 
 期待与你交流！😊
 
-### 技能栈
-
-**前端技术**: HTML5, CSS3, JavaScript, React, Vue.js
-**后端技术**: Node.js, Python, Express, Django
-**数据库**: MySQL, MongoDB, Redis
-**工具**: Git, Docker, VS Code, Webpack
 
 ### 最近项目
 
